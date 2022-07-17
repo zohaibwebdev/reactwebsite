@@ -1,9 +1,10 @@
 import React from 'react'
-import logo from './web.jpeg'
+import logo from './logo.svg'
 import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
+    <>
     <div className='home container'>
         <div className="right-side">
             <h3 className='heading'>welcome to our website</h3>
@@ -12,9 +13,13 @@ const Home = () => {
             <NavLink className="btn" to="/services">Hire Us</NavLink>
         </div>
         <div className="left-side">
-            <img src="./web.jpeg" alt="logo" />
+            <img src={logo} alt="logo" />
         </div>
     </div>
+    <div className="footer">
+      <h6>develope by <span> Muhammad Zohaib Ul Hassan</span> </h6>
+    </div>
+    </>
   )
 }
 

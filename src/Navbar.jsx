@@ -1,37 +1,32 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink as A } from 'react-router-dom'
 
 const Navbar = () => {
-    let activeClassName = "underline";
-    return (
 
-    <>
-        <nav class="navbar">
-        <div class="navbar-container container">
-            <input type="checkbox" name="" id="" />
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><NavLink className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            } to="/">Home</NavLink></li>
-                <li><NavLink className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            } to="/about">About</NavLink></li>
-                <li><NavLink className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            } to="/services">Services</NavLink></li>
-                <li><NavLink className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            } to="/contact">Contact</NavLink></li>
-            </ul>
-            <h1 class="logo">ZOHAIB</h1>
-        </div>
+  const [activeClass, setActiveClass] = useState(false);
+
+    return (
+    <nav className={`navbar ${activeClass ? 'active' : ''}`}>
+      <A to='/' className="navbar_brand">ZOHAIB</A>
+      <div className="navbar_links">
+        <button
+          className="navbar_close"
+          onClick={() => { setActiveClass(!activeClass)}}
+        >
+            &times;
+        </button>
+        <A to="/" className="navbar_link">Home</A>
+        <A to="/services" className="navbar_link">Services</A>
+        <A to="/about" className="navbar_link">About</A>
+        <A to="/contact" className="navbar_link">Contact</A>
+      </div>
+      <button
+          className='navbar_open'
+          onClick={() => { setActiveClass(!activeClass)}}
+      >
+        ≡
+      </button>
     </nav>
-    </>
   )
 }
 

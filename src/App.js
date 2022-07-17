@@ -1,6 +1,6 @@
 import React from 'react'
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Routes, Route } from 'react-router-dom'
+//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Home from './Home'
 import Contact from './Contact'
 import About from './About'
@@ -11,7 +11,7 @@ import "./style.css";
 
 export const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>} />
@@ -20,8 +20,7 @@ export const App = () => {
         <Route path='/contact' element={<Contact/>} />
         <Route path='*' element={<Home/>} />
       </Routes>
-      
-    </>
+    </BrowserRouter>
   )
 }
 
