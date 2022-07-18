@@ -17,7 +17,7 @@ const Home = () => {
         </div>
     </div>
     <div className="footer">
-      <h6>develope by <span> Muhammad Zohaib Ul Hassan</span> </h6>
+      <h6>Develope by <span> Muhammad Zohaib Ul Hassan</span> with love </h6>
     </div>
     </>
   )
