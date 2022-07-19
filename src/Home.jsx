@@ -6,13 +6,13 @@ const Home = () => {
   return (
     <>
     <div className='home container'>
-        <div className="right-side">
+        <div className="left-side">
             <h3 className='heading'>welcome to our website</h3>
             <h3 className='heading'>Grow your bussiness with <strong>Zohaib Ul Hassan</strong></h3>
             <p className='lead'>we are the team of the talented web developers</p>
             <NavLink className="btn" to="/services">Hire Us</NavLink>
         </div>
-        <div className="left-side">
+        <div className="right-side">
             <img src={logo} alt="logo" />
         </div>
     </div>
